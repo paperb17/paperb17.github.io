@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    *{
+      background-color:#F9BBCD;
+    }
+    body{
+      max-width:800px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    h1{
+      color:red;
+      font-family:serif;
+      text-align:center;
+    }
+    p{
+      font-size:12px;
+    }
+    ul{
+      list-style-type: none;
+    }
+    li{   
+      float:left;
+      width:31%;
+      padding:1%;
+    }
+     h2{
+   margin:0px;
+   font-size:13px;
+   text-align:center;
+   font-family:serif;
+ }
+  </style>
+</head>
+<body>
+  <div class="test">
+  <h1>Lorem ipsum dolor sit amet.</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac ornare libero. Donec laoreet hendrerit elit, id aliquam libero volutpat ut. Aliquam erat volutpat. Morbi vulputate ex in luctus posuere. In hac habitasse platea dictumst.</p>
+<p>Sed in maximus massa. Cras est odio, sollicitudin vitae venenatis in, fermentum a tellus.</p>
+  </div>
+    <ul>
+      <li><img src="http://kaywonsad.appspot.com/s/art01.jpg"><h2>Aliquam</h2></li>
+      <li><img src="http://kaywonsad.appspot.com/s/art02.jpg"><h2>Vestibulum</h2></li>
+      <li><img src="http://kaywonsad.appspot.com/s/art03.jpg"><h2>Donec</h2></li>
+      <li><img src="http://kaywonsad.appspot.com/s/art04.jpg"><h2>Maecenas</h2></li>
+      <li><img src="http://kaywonsad.appspot.com/s/art05.jpg"><h2>Quisque</h2></li>
+      <li><img src="http://kaywonsad.appspot.com/s/art06.jpg"><h2>Proin</h2></li>
+    </ul>
+</body>
+</html>

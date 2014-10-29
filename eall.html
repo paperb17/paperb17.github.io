@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    body{
+      font-family:a드림고딕1;
+      max-width:900px;
+      margin:0 auto;
+      font-size:12px;
+      padding:40px;
+    }
+    div. page{
+      width:10px;
+      margin:0 auto;
+       position: fixed;
+  right: 50%;
+  top: 250px;
+  margin-right: -720px;
+  text-align:center;
+  width: 120px;
+    }
+    ul{
+      list-style-type:none;
+      text-align:center;
+      font-size:12px;
+    }
+    li{
+      padding:6px;
+    }
+    a{
+      text-decoration:none;
+      color:black;
+    }
+    .content {
+      width: 550px;
+      font-size:12px;
+      display: inline-block;
+      text-align:left;
+    }
+    .writer{
+      width:120px;
+      font-size:12px;
+      border-bottom:1px solid black;
+      padding-bottom:2px;
+      display: inline-block;
+      text-align:right;
+      padding-top:30px;
+    }
+    .writer2{
+      width:120px;
+      font-size:12px;
+      display: inline-block;
+      text-align:left; 
+    }
+    .writer3{
+      width:333px;
+      font-size:12px;
+      display: inline-block;
+      text-align:left;
+    }
+    .writer4{
+      width:333px;
+      font-size:12px;
+      display: inline-block;
+      text-align:left;
+      padding-top:30px;
+    }
+    .all{
+      position:fixed;
+      font-size:13px;
+      margin-right:100px;
+    }
+    .language{
+      position:fixed;
+      padding-left:850px;
+      font-size:13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="all"><a href="enfirst.html">All</a></div>
+  <div class="language">
+    <span class="ko"><a href="kofirst.html">한글</a></span>
+    <span class="en"><a href="enfirst.html">English</a></span>
+  </div>
+  
+  <div class="page" id="floating">
+    <ul>
+    <li>
+      <div class="writer">Sunjung Kim</div>
+      <span class="num">4</span>
+      <div class="content">Platform: A Tentative Project</div>
+    </li>
+    <li>
+      <div class="writer2"></div>
+      <span class="num">14</span>
+      <div class="content">“I have nothing to say and I am saying it” </div>
+    </li>
+    <li>
+      <div class="writer2">John Cage/<br>Kim Soun Gui</div>
+      <span class="num">26</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">Gilbert & George</div>
+      <span class="num">28</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer">Bartomeu Mari</div>
+      <span class="num">30</span>
+      <div class="content">“A Theatre Without Theatre” and “Great Theatre of the World”</div>
+    </li>
+    <li>
+      <div class="writer2">Salvador Dali</div>
+      <span class="num">40</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">David Lamelas</div>
+      <span class="num">42</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">Bruce Mauman</div>
+      <span class="num">44</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">Robert Morris</div>
+      <span class="num">46</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer">Sohyun Park</div>
+      <span class="num">48</span>
+      <div class="content">
+The Geopolitics of Informel and the “Acting Artist”:<br>The Genealogy of its Conceptual Relocation</div>
+    </li>
+    <li>
+      <div class="writer2">
+Allan Kaprow</div>
+      <span class="num">72</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">Vito Acconci</div>
+      <span class="num">74</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">Trisha Brown</div>
+      <span class="num">76</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">Yvonne Rainer</div>
+      <span class="num">78</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer">Fumihiko Sumitomo</div>
+      <span class="num">80</span>
+      <div class="content">The Ethnographical Turn Occurring in Japanese Post-War Art</div>
+    </li>
+    <li>
+      <div class="writer2">Saburo Murakami</div>
+      <span class="num">88</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">PLAY</div>
+      <span class="num">90</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer">Shuyang</div>
+      <span class="num">92</span>
+      <div class="content">Performance and Live Art in China</div>
+    </li>
+    <li>
+      <div class="writer2">Action In China</div>
+      <span class="num">98</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">DaDao Live Art Festival</div>
+      <span class="num">100</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer4">Marina Abramovic</div>
+      <span class="num">106</span>
+      <div class="writer4"></div>
+    </li>
+    <li>
+      <div class="writer3">Nina Beier & Marie Lund</div>
+      <span class="num">110</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Angela Bulloch</div>
+      <span class="num">114</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Janet Cardiff</div>
+      <span class="num">118</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Jae Eun Choi</div>
+      <span class="num">122</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">contact Gonzo</div>
+      <span class="num">126</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Martin Creed</div>
+      <span class="num">130</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Manon de Boer</div>
+      <span class="num">134</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Jan Fabre</div>
+      <span class="num">138</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Peter Fischli/ David Weiss</div>
+      <span class="num">142</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Dan graham</div>
+      <span class="num">146</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Yang Ah Ham</div>
+      <span class="num">150</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Jeppe Hein</div>
+      <span class="num">154</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Luis Jacob</div>
+      <span class="num">158</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Sora Kim</div>
+      <span class="num">164</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Kim Soun Gui</div>
+      <span class="num">168</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Surasi Kusolwong</div>
+      <span class="num">170</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Kang-so Lee</div>
+      <span class="num">174</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">MURAI Keitetsu</div>
+      <span class="num">178</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Hwayeon Nam</div>
+      <span class="num">182</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Jooyeon Park</div>
+      <span class="num">188</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Navin Party</div>
+      <span class="num">192</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Markus Schinwald</div>
+      <span class="num">196</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Tino Sehgal</div>
+      <span class="num">200</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Akira Takayama</div>
+      <span class="num">204</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Koki Tanaka</div>
+      <span class="num">208</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Ujino Muneteru</div>
+      <span class="num">212</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Thoma Vuille</div>
+      <span class="num">216</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Xijing Men</div>
+      <span class="num">220</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Xuzhen</div>
+      <span class="num">226</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">Dong Koo Yun</div>
+      <span class="num">230</span>
+      <div class="writer3"></div>
+    </li>
+      <li>
+      <div class="content"></div>
+      <span class="num">234</span>
+      <div class="writer2">Lectures & Talks</div>
+    </li>
+      <li>
+      <div class="content"></div>
+      <span class="num">264</span>
+      <div class="writer2">Video Screening Program</div>
+    </li>
+      <li>
+      <div class="content"></div>
+      <span class="num">272</span>
+      <div class="writer2">Musical Theatre</div>
+    </li>
+      <li>
+      <div class="content"></div>
+      <span class="num">276</span>
+      <div class="writer2">Platform Yokohama</div>
+    </li>
+      <li>
+      <div class="writer">Hyun Jung</div>
+      <span class="num">282</span>
+      <div class="content">The Avant-Garde and Walking</div>
+    </li>
+      <li>
+      <div class="writer">Enna Bae</div>
+      <span class="num">292</span>
+      <div class="content">The Future Past: Platform Seoul 2008</div>
+    </li>
+    </ul>
+  </div>
+</body>
+</html>

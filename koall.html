@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    body{
+      font-family:a드림고딕1;
+      max-width:900px;
+      margin:0 auto;
+      font-size:12px;
+      padding:40px;
+    }
+    div. page{
+      width:10px;
+      margin:0 auto;
+       position: fixed;
+  right: 50%;
+  top: 250px;
+  margin-right: -720px;
+  text-align:center;
+  width: 120px;
+    }
+    ul{
+      list-style-type:none;
+      text-align:center;
+      font-size:12px;
+    }
+    li{
+      padding:6px;
+    }
+    a{
+      text-decoration:none;
+      color:black;
+    }
+    .content {
+      width: 550px;
+      font-size:12px;
+       display: inline-block;
+      text-align:left;
+    }
+    .writer{
+      display: inline-block;
+      text-align:right;
+      padding-top:30px;
+      width:120px;
+      font-size:12px;
+      border-bottom:1px solid black;
+      padding-bottom:2px;
+    }
+    .writer2{
+      display: inline-block;
+      text-align:left;
+      width:120px;
+      font-size:12px;
+    }
+    .writer3{
+      display: inline-block;
+      text-align:left;
+      width:333px;
+      font-size:12px;
+    }
+    .writer4{
+      display: inline-block;
+      text-align:left;
+      padding-top:30px;
+      width:333px;
+      font-size:12px;
+    }
+    .all{
+      position:fixed;
+      font-size:13px;
+      margin-right:100px;
+    }
+    .language{
+      position:fixed;
+      padding-left:850px;
+      font-size:13px;
+    }
+
+  </style>
+</head>
+<body>
+  <span class="all"><a href="kofirst.html">All</a></span>
+  <div class="language">
+    <span class="ko"><a href="kofirst.html">한글</a></span>
+    <span class="en"><a href="enfirst.html">English</a></span>
+  </div>
+  <div class="page" id="floating">
+    <ul>
+    <li>
+      <div class="writer">김선정</div>
+      <span class="num">4</span>
+      <div class="content">플랫폼: 임시적 프로젝트 </div>
+    </li>
+    <li>
+      <div class="writer2"></div>
+      <span class="num">14</span>
+      <div class="content">“I have nothing to say and I am saying it” </div>
+    </li>
+    <li>
+      <div class="writer2">존케이지/김순기</div>
+      <span class="num">26</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">길버트&조지</div>
+      <span class="num">28</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer">바르또 마리</div>
+      <span class="num">30</span>
+      <div class="content">《무대 없는 연극》과 《세상이라는 거대한 연극》
+:20세기 미술 안에서의 연극성에 대한 두 가지 실험</div>
+    </li>
+    <li>
+      <div class="writer2">살바도르 달리</div>
+      <span class="num">40</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">다비드 라멜라스</div>
+      <span class="num">42</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">브루스 나우만</div>
+      <span class="num">44</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">로버트 모리스</div>
+      <span class="num">46</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer">박소현</div>
+      <span class="num">48</span>
+      <div class="content">
+엥포르멜의 지정학과 ‘행동하는 화가’: 그 개념적 재배치의 계보</div>
+    </li>
+    <li>
+      <div class="writer2">앨런 캐프로</div>
+      <span class="num">72</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">비토 아콘치</div>
+      <span class="num">74</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">트리샤 브라운</div>
+      <span class="num">76</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">이본느 라이너</div>
+      <span class="num">78</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer">수미토모 후미히코</div>
+      <span class="num">80</span>
+      <div class="content">전후 일본 예술의 민족지적 전환</div>
+    </li>
+    <li>
+      <div class="writer2">무라카미 사부로</div>
+      <span class="num">88</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">플레이</div>
+      <span class="num">90</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer">슈 양</div>
+      <span class="num">92</span>
+      <div class="content">중국의 퍼포먼스와 라이브 아트</div>
+    </li>
+    <li>
+      <div class="writer2">액션 인 차이나</div>
+      <span class="num">98</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer2">다다오 라이브 아트<br>페스티벌</div>
+      <span class="num">100</span>
+      <div class="content"></div>
+    </li>
+    <li>
+      <div class="writer4">마리나 아브라모비치</div>
+      <span class="num">106</span>
+      <div class="writer4"></div>
+    </li>
+    <li>
+      <div class="writer3">니나 바이에르 & 마리 룬</div>
+      <span class="num">110</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">안젤라 블로흐</div>
+      <span class="num">114</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">쟈넷 카디프</div>
+      <span class="num">118</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">최재은</div>
+      <span class="num">122</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">콘탁 곤조</div>
+      <span class="num">126</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">마틴 크리드</div>
+      <span class="num">130</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">마농 더 부르</div>
+      <span class="num">134</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">얀 파브르</div>
+      <span class="num">138</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">페터 피슐리/ 다비드 바이스</div>
+      <span class="num">142</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">댄 그레이엄</div>
+      <span class="num">146</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">함양아</div>
+      <span class="num">150</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">예페 하인</div>
+      <span class="num">154</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">루이 자콥</div>
+      <span class="num">158</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">김소라</div>
+      <span class="num">164</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">김순기</div>
+      <span class="num">168</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">수라시 쿠솔롱</div>
+      <span class="num">170</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">이강소</div>
+      <span class="num">174</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">무라이 게이데쓰</div>
+      <span class="num">178</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">남화연</div>
+      <span class="num">182</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">박주연</div>
+      <span class="num">188</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">나빈당</div>
+      <span class="num">192</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">마르쿠스 쉰발트</div>
+      <span class="num">196</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">티노 세갈</div>
+      <span class="num">200</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">다카야마 아키라</div>
+      <span class="num">204</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">다나카 고키</div>
+      <span class="num">208</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">우지노 무네테루</div>
+      <span class="num">212</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">토마 뷔유</div>
+      <span class="num">216</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">시징맨</div>
+      <span class="num">220</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">슈 젠</div>
+      <span class="num">226</span>
+      <div class="writer3"></div>
+    </li>
+    <li>
+      <div class="writer3">윤동구</div>
+      <span class="num">230</span>
+      <div class="writer3"></div>
+    </li>
+      <li>
+      <div class="content"></div>
+      <span class="num">234</span>
+      <div class="writer2">강연·토크</div>
+    </li>
+      <li>
+      <div class="content"></div>
+      <span class="num">264</span>
+      <div class="writer2">비디오 프로그램</div>
+    </li>
+      <li>
+      <div class="content"></div>
+      <span class="num">272</span>
+      <div class="writer2">음악극 공연</div>
+    </li>
+      <li>
+      <div class="content"></div>
+      <span class="num">276</span>
+      <div class="writer2">플랫폼 요코하마</div>
+    </li>
+      <li>
+      <div class="writer">정현</div>
+      <span class="num">282</span>
+      <div class="content">아방가르드와 걷기</div>
+    </li>
+      <li>
+      <div class="writer">배은아</div>
+      <span class="num">292</span>
+      <div class="content">미래의 과거: 플랫폼 서울 2008</div>
+    </li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -12,7 +12,7 @@
       margin-right:auto;
       padding: 40px;
       background-color: #fcf1d5;
-      font-family:'Open Sans Condensed', 'Nanum Gothic','a드림고딕1', 'san-serif';
+      font-family:'Open Sans Condensed', 'Nanum Gothic', 'san-serif';
       color: #767C6E;
     }
     .actor{
@@ -38,16 +38,22 @@
       width: 80%;
       margin: 0 auto;
     }
-    .title{    
+    img.title{    
       display: block;
       margin: 0 auto;
       padding: 20px;
       width: 80%;
       padding-bottom: 0;
     }
+    h1.title{
+      text-align: center;
+      display: none;
+    }
     h2{
       font-size:16px;
       text-align: center;
+      text-transform: uppercase;
+      padding-top: 10px;
     }
     h3{
       font-size: 13px;
@@ -89,36 +95,37 @@
       text-align: center;
       padding-left: 0;
       list-style-type: 0;
+      font-size: 13px;
     }
     .hotissue span{
-      padding-top: 0;
-      font-size: 13px;
+      font-weight: bold;
+      padding-top: 10px;
+    }
+    .hotissue li{
+      padding-bottom: 5px;
+    }
+    .hotissue ul, li{
+      padding-left: 0;
     }
     .character{
-      display: block;
-      text-align: center;
-      padding-top: 50px;
+      list-style-type:none;
+      padding-left:0;
+      font-size:13px;
+      font-weight:bold;
     }
-       .man{
-      margin: 0 auto;
-      display: inline;
-      text-align: center;
-      padding-top: 20px;
+    .character ul, li{
+      list-style-type:none;
+      padding-left:0;
+      text-align:center;
     }
-    .woman{
-      margin: 0 auto;
-      display: inline;
-      text-align: center;
+    .character ul{
+      padding-bottom:13px;
     }
-    .man > span{
-      display: block;
-      line-height: 23px;
-      font-size: 13px;
+    .man li:first-child, .woman li:first-child{
+      padding-top:5px;
     }
-    .woman > span{
-      display: block;
-      line-height: 23px;
-      font-size: 13px;
+    .man ul, .woman ul{
+      font-weight:normal;
     }
   </style>
 </head>
@@ -197,6 +204,7 @@
   </ul>
   <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/poster2.png" alt="poster" class="poster">
     <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/title2.png" alt="title" class="title">
+    <h1 class="title">매직 인 더 문라이트</h1>
   <h2>
     우디 앨런 감독작품
   </h2>
@@ -280,7 +288,7 @@
   2014년 가장 로맨틱한 마술쇼가 펼쳐진다!
 </h3>
 <h2>
-  STORY
+  Story
   </h2>   
   <p class="story">
     1928년 유럽을 사로잡은 중국인 스타 마술사 웨이링수.
@@ -293,78 +301,88 @@
   </p>
     <img src ="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/slide.jpg" alt="slide" class="slide">
   <h2>
-    HOT ISSUE
+    Hot Issue
   </h2>
   <ul class="hotissue">
     <li>
-  <h3>
+      <span>
     이름만 들어도
     사랑스러운 로맨틱 커플!
     콜린 퍼스 &amp; 엠마스톤
-  </h3>
-  <span>
+      </span>
+      <ul>
+        <li>
     무심한 듯 다정한 로맨틱가이의 정석
     콜린 퍼스와 할리우드 대표 러블리걸
     엠마 스톤의 마법 같은 만남
-  </span>
-   </li>
+  </li>
+   </ul>
+    </li>
     <li>
-  <h3>
-    남부프랑스에서 펼쳐지는 로맨틱 마술쇼
-  </h3>
-  <span>
+      <span>
+      남부프랑스에서 펼쳐지는 로맨틱 마술쇼
+      </span>
+  <ul>
+  <li>
     바르셀로나, 파리, 로마 이어
     지중해가 펼쳐진 남부프랑스로 향한
     우디앨런 감독의 유럽시리즈 최신판
-  </span>
-   </li>
+  </li>
+   </ul>
+    </li>
     <li>
-  <h3>
+      <span>
     눈과 귀가 즐거운 
     1920년대로의 시간여행
-  </h3>
-  <span>
+      </span>
+  <ul>
+  <li>
     재즈매니아 우디 앨런이 선사하는 
     1920 재즈에이지 넘버들과 엠마 스톤이 
     완벽하게 소화한 1920년대 프렌치 러블리룩
-  </span>
-   </li>
+  </li>
+   </ul>
+    </li>
     <li>
-  <h3> 
+  <span> 
    모두가 기다려온
    로맨틱 아트버스터
-  </h3>
-  <span>
+  </span>
+    <ul>
+    <li>
     아트버스터의 원조 거장
     우디 앨런이 선사하는 환상적인
     마술과 낭만의 세계
-  </span>
    </li>
   </ul>
-<h2 class="character">
-  CHARACTER &amp; CAST
+    </li>
+  </ul>
+<h2>
+  Character &amp; Cast
 </h2>
-   <div class = "man">
-<h3>
+<ul class="character">
+  <li class="man">
    유럽 최고의 스타 마술사
-  </h3>
-  <span>
+   <ul>
+  <li>
     스탠리 크로포드 
-  </span>
-  <span>
+  </li>
+  <li>
     콜린 퍼스
-  </span>
-     </div>
-  <div class = "woman">
-  <h3>
-   사랑스러운 4차원 심령술사
-  </h3>
-  <span>
+  </li>
+     </ul>
+   </li>
+   <li class="woman">
+     사랑스러운 4차원 심령술사
+  <ul>
+  <li>
     소피 베이커
-  </span>
-  <span>
+  </li>
+  <li>
     엠마 스톤
-  </span>
-</div>
+  </li>
+</ul>
+</li>
+</ul>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Magin In The Moonlight</title>
+  <title>JS Bin</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
   <style>
     body{
@@ -22,14 +22,14 @@
       display:inline;
       float: left;
       padding-right: 10px;
-      font-size: 14px;
+      font-size:14px;
       padding-bottom: 10px;
     }
     .koreanname{
       display: inline;
       float: left;
       padding-right: 20px;
-      font-size: 14px;
+      font-size:14px;
       padding-bottom: 10px;
     }
     .poster{
@@ -44,31 +44,25 @@
       width: 80%;
       padding-bottom: 0;
     }
-    h1{
-      font-size: 16px;
-      text-align: center;
-      padding-top: 10px;
-    }
     h2{
-      font-size:14px;
+      font-size:16px;
       text-align: center;
     }
     h3{
       font-size: 13px;
       text-align: center;
     }
-    .productions{
-      list-style-type: none;
-      display: inline;
-      padding-left: 0;
-      font-size: 12px;
-    }
-    .presents, .castingby, .productiondesigner, .costumedesigner, .editor, .directorofphotography, .coproducers, .written{
-      display: inline;
-      text-align: center;
+     .productions{
+      list-style-type:none;
+      padding-left:0;
+      text-align:center;
     }
     .productions ul,li{
-      list-style-type: none;
+      list-style-type:none;
+      padding-left:0;
+    }
+    .productions ul{
+      padding-bottom: 10px;
     }
     .romantic{
       margin: 0 auto;
@@ -96,6 +90,7 @@
       list-style-type: 0;
     }
     .hotissue span{
+      padding-top: 0;
       font-size: 13px;
     }
     .character{
@@ -205,86 +200,63 @@
     우디 앨런 감독작품
   </h2>
   <ul class="productions">
-    <li>
-      <ul class="presents">
+    <li class="presents">
+      Presents
+      <ul>
       <li>
-      Sony Pictures Classics
-      </li>
-    <li>
-      In Association With
+      Sony Pictures Classics In Association With Gravier Productions
     </li>
     <li>
-      Gravier Productions
-    </li>
-    <li>
-      A Dippermouth Production
-    </li>
-    <li>
-      In Association With
-    </li>
-    <li>
-      Perdido Productions &amp; Ske-Dat-De-Dat Productions
+      A Dippermouth Production In Association With Perdido Productions &amp; Ske-Dat-De-Dat Productions
     </li>
   </ul>
 </li>
-    <li>
-      <ul class="castingby">
-        <li>
-          Casting By
-        </li>
+    <li class="castingby">
+      Casting By
+      <ul>
         <li>
           Juliet Taylor
         </li>
         <li>
-Patricia Dicerto 
+          Patricia Dicerto 
         </li>
       </ul>
     </li>
-    <li>
-      <ul class="costumedesigner">
-        <li>
-          Costume Designer
-        </li>
+    <li class="costumedesigner">
+      Costume Designer
+      <ul>
         <li>
           Sonia Grande
         </li>
       </ul>
     </li>
-    <li>
-      <ul class="editor">
+    <li class="editor">
+      Editor
+      <ul>
         <li>
-Editor
-        </li>
-        <li>
-Alisa Lepselter
+          Alisa Lepselter
         </li>
       </ul>
     </li>
-  <li>
-      <ul class="productiondesigner">
-        <li>
-          Production Designer
-        </li>
+  <li class="productiondesigner">
+    Production Designer
+      <ul>
         <li>
           Anne Seibel
         </li>
       </ul>
   </li>
-  <li>
-      <ul class="directorofphotography">
-        <li>
-          Director of Photography
-        </li>
+  <li class="directorofphotography">
+    Director of Photography
+      <ul>
         <li>
           Dariuskhondji
         </li>
       </ul>
   </li>
-  <li>
-      <ul class="coproducers">
-        <li>
-          Co-Producers
-        </li>
+  <li class="coproducers">
+    Coproducers
+      <ul>
         <li>
           Helen Robin
         </li>
@@ -293,11 +265,9 @@ Alisa Lepselter
         </li>
       </ul>
   </li>
-  <li>
-      <ul class="written">
-        <li>
-          Written And Directed
-        </li>
+  <li class="written">
+    Written And Directed
+      <ul>
         <li>
           Woody Allen
         </li>
@@ -305,12 +275,12 @@ Alisa Lepselter
   </li>
   </ul>
 <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/romantic.jpg" alt="romantic" class="romantic">
-<h2>
+<h3>
   2014년 가장 로맨틱한 마술쇼가 펼쳐진다!
-</h2>
-<h1>
+</h3>
+<h2>
   STORY
-  </h1>   
+  </h2>   
   <p class="story">
     1928년 유럽을 사로잡은 중국인 스타 마술사 웨이링수.
     그의 진짜 정체는 스탠리(콜린퍼스)라는 이름의 영국인으로,
@@ -321,9 +291,9 @@ Alisa Lepselter
     스탠리는 설상가상 그녀의 묘한 매력에 빠져들게 되는데..
   </p>
     <img src ="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/slide.jpg" alt="slide" class="slide">
-  <h1>
+  <h2>
     HOT ISSUE
-  </h1>
+  </h2>
   <ul class="hotissue">
     <li class>
   <h3>
@@ -370,9 +340,9 @@ Alisa Lepselter
   </span>
    </li>
   </ul>
-<h1 class="character">
+<h2 class="character">
   CHARACTER &amp; CAST
-</h1>
+</h2>
    <div class = "man">
 <h3>
    유럽 최고의 스타 마술사

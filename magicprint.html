@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css'>
+  <style>
+    body{
+      max-width: 800px;
+      margin-left:auto;
+      margin-right:auto;
+      padding: 40px;
+      background-color: #fcf1d5;
+      font-family:'Open Sans Condensed', 'Nanum Gothic', 'san-serif';
+      color: #767C6E;
+    }
+    .actor{
+      list-style-type:none;
+      padding-left: 20px;
+    }
+    .englishname{
+      display:inline;
+      float: left;
+      padding-right: 10px;
+      font-size:14px;
+      padding-bottom: 10px;
+    }
+    .koreanname{
+      display: inline;
+      float: left;
+      padding-right: 20px;
+      font-size:14px;
+      padding-bottom: 10px;
+    }
+    .poster{
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+    }
+    img.title{    
+      display: block;
+      margin: 0 auto;
+      padding: 20px;
+      width: 80%;
+      padding-bottom: 0;
+    }
+    h1.title{
+      text-align: center;
+      display: none;
+    }
+    h2{
+      font-size:16px;
+      text-align: center;
+      text-transform: uppercase;
+      padding-top: 10px;
+    }
+    h3{
+      font-size: 13px;
+      text-align: center;
+    }
+     .productions{
+      list-style-type:none;
+      padding-left:0;
+      text-align:center;
+    }
+    .productions ul,li{
+      list-style-type:none;
+      padding-left:0;
+    }
+    .productions ul{
+      padding-bottom: 10px;
+    }
+    .romantic{
+      margin: 0 auto;
+      display: block;
+      width: 90%;
+      padding-top: 40px;
+    }
+    .slide{
+      margin: 0 auto;
+      display: block;
+      width: 90%;
+    }
+    .story{
+      line-height: 21px;
+      font-size: 13px;
+      padding-bottom: 50px;
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .hotissue{
+      display: block;
+      text-align: center;
+      padding-left: 0;
+      list-style-type: 0;
+      font-size: 13px;
+    }
+    .hotissue span{
+      font-weight: bold;
+      padding-top: 10px;
+    }
+    .hotissue li{
+      padding-bottom: 5px;
+    }
+    .hotissue ul, li{
+      padding-left: 0;
+    }
+    .character{
+      list-style-type:none;
+      padding-left:0;
+      font-size:13px;
+      font-weight:bold;
+    }
+    .character ul, li{
+      list-style-type:none;
+      padding-left:0;
+      text-align:center;
+    }
+    .character ul{
+      padding-bottom:13px;
+    }
+    .man li:first-child, .woman li:first-child{
+      padding-top:5px;
+    }
+    .man ul, .woman ul{
+      font-weight:normal;
+    }
+    @media print{
+      body{
+        background-color:white;
+        padding: 15px;
+        margin-left:0;
+        margin-right:0;
+      }
+      .actor{
+        padding-top: 0;
+      }
+      .englishname, .koreanname{
+        padding-bottom: 5px;
+      }
+      .englishname{
+        padding-right: 5px;
+      }
+      .koreanname{
+        padding-right: 10px;
+      }
+      img{
+        text-align: center;
+      }
+      img.poster{
+        padding-top: 30px;
+      }
+      img.title{
+       
+      }
+      .productions{
+        page-break-inside: avoid;
+        font-size: 11px;
+        padding-left: 5px;
+        padding-top: 40px;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+      }
+      .productions ul, .productions li{
+        display: inline;
+      }
+      .productions li{
+        padding-right: 5px;
+      }
+      .romantic{
+        width: 50%;
+        page-break-before: always
+      }
+      .slide{
+        width: 90%;
+      }
+      .hotissue{
+        padding-bottom: 30px;
+      }
+      .character{
+        margin-right: 0;
+        margin-left: 0;
+        padding-left: 130px;
+      }
+      .character ul{
+        margin-right: 0;
+        margin-left: 0;
+      }
+      .man{
+      display:inline;
+      float:left;
+      padding-right: 120px;
+      }
+      .woman{
+      display:inline;
+      float:left;
+      }
+    }
+  </style>
+</head>
+<body>
+<ul class="actor">
+  <li>
+    <ul>
+  <li class="englishname">
+    Eileen Atkins
+  </li>
+  <li class="koreanname">
+   에일린 앗킨스
+ </li>
+ </ul>
+  </li>
+  <li>
+<ul>
+  <li class="englishname">
+    Colin Firth
+  </li>
+  <li class="koreanname">
+    콜린 퍼스
+  </li>
+</ul>
+</li>
+<li>
+<ul>
+  <li class="englishname">
+    Marcia Gay Harden 
+  </li>
+   <li class="koreanname">
+    마샤 게이 하든
+  </li>
+</ul>
+</li>
+<li>
+<ul>
+  <li class="englishname">
+    Hamish Linklater
+  </li>
+  <li class="koreanname">
+    해미쉬 링클레이터
+  </li>
+</ul>
+</li>
+<li>
+  <ul>
+  <li class="englishname">
+    Simon McBurney
+  </li>
+  <li class="koreanname">
+    사이먼 맥버니
+  </li>
+</ul>
+</li>
+<li>
+<ul>
+  <li class="englishname">
+    Emma Stone
+  </li>
+  <li class="koreanname">
+    엠마 스톤
+  </li>
+</ul>
+</li>
+<li>
+<ul>
+  <li class="englishname">
+    Jacki Weaver
+  </li>
+  <li class="koreanname">
+    재키 위버
+  </li>
+</ul>
+</li>
+  </ul>
+  <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/poster2.png" alt="poster" class="poster">
+    <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/title2.png" alt="title" class="title">
+    <h1 class="title">매직 인 더 문라이트</h1>
+  <h2>
+    우디 앨런 감독작품
+  </h2>
+  <ul class="productions">
+    <li class="presents">
+      Presents
+      <ul>
+      <li>
+      Sony Pictures Classics In Association With Gravier Productions
+    </li>
+    <li>
+      A Dippermouth Production In Association With Perdido Productions &amp; Ske-Dat-De-Dat Productions
+    </li>
+  </ul>
+</li>
+    <li class="castingby">
+      Casting By
+      <ul>
+        <li>
+          Juliet Taylor
+        </li>
+        <li>
+          Patricia Dicerto 
+        </li>
+      </ul>
+    </li>
+    <li class="costumedesigner">
+      Costume Designer
+      <ul>
+        <li>
+          Sonia Grande
+        </li>
+      </ul>
+    </li>
+    <li class="editor">
+      Editor
+      <ul>
+        <li>
+          Alisa Lepselter
+        </li>
+      </ul>
+    </li>
+  <li class="productiondesigner">
+    Production Designer
+      <ul>
+        <li>
+          Anne Seibel
+        </li>
+      </ul>
+  </li>
+  <li class="directorofphotography">
+    Director of Photography
+      <ul>
+        <li>
+          Dariuskhondji
+        </li>
+      </ul>
+  </li>
+  <li class="coproducers">
+    Coproducers
+      <ul>
+        <li>
+          Helen Robin
+        </li>
+        <li>
+          Raphael Benoliel
+        </li>
+      </ul>
+  </li>
+  <li class="written">
+    Written And Directed
+      <ul>
+        <li>
+          Woody Allen
+        </li>
+      </ul>
+  </li>
+  </ul>
+<img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/romantic.jpg" alt="romantic" class="romantic">
+<h3>
+  2014년 가장 로맨틱한 마술쇼가 펼쳐진다!
+</h3>
+<h2>
+  Story
+  </h2>   
+  <p class="story">
+    1928년 유럽을 사로잡은 중국인 스타 마술사 웨이링수.
+    그의 진짜 정체는 스탠리(콜린퍼스)라는 이름의 영국인으로,
+    눈에 보이지 않는 것은 그 무엇도 믿지 않는 냉철한 이성주의자이다.
+    어느 날 동료 마술사로부터 심령술사 소피(엠마 스톤)의 이야기를 듣게 된 스탠리는
+    그녀의 시령술이 가짜라고 확신하고 소피의 정체를 밝히기 위해 남부프랑스로 향한다.
+    하지만 놀랍게도 소피는 스탠리의 가족에 얽힌 비밀까지 맞혀내고,
+    스탠리는 설상가상 그녀의 묘한 매력에 빠져들게 되는데..
+  </p>
+    <img src ="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/slide.jpg" alt="slide" class="slide">
+  <h2>
+    Hot Issue
+  </h2>
+  <ul class="hotissue">
+    <li>
+      <span>
+    이름만 들어도
+    사랑스러운 로맨틱 커플!
+    콜린 퍼스 &amp; 엠마스톤
+      </span>
+      <ul>
+        <li>
+    무심한 듯 다정한 로맨틱가이의 정석
+    콜린 퍼스와 할리우드 대표 러블리걸
+    엠마 스톤의 마법 같은 만남
+  </li>
+   </ul>
+    </li>
+    <li>
+      <span>
+      남부프랑스에서 펼쳐지는 로맨틱 마술쇼
+      </span>
+  <ul>
+  <li>
+    바르셀로나, 파리, 로마 이어
+    지중해가 펼쳐진 남부프랑스로 향한
+    우디앨런 감독의 유럽시리즈 최신판
+  </li>
+   </ul>
+    </li>
+    <li>
+      <span>
+    눈과 귀가 즐거운 
+    1920년대로의 시간여행
+      </span>
+  <ul>
+  <li>
+    재즈매니아 우디 앨런이 선사하는 
+    1920 재즈에이지 넘버들과 엠마 스톤이 
+    완벽하게 소화한 1920년대 프렌치 러블리룩
+  </li>
+   </ul>
+    </li>
+    <li>
+  <span> 
+   모두가 기다려온
+   로맨틱 아트버스터
+  </span>
+    <ul>
+    <li>
+    아트버스터의 원조 거장
+    우디 앨런이 선사하는 환상적인
+    마술과 낭만의 세계
+   </li>
+  </ul>
+    </li>
+  </ul>
+<h2>
+  Character &amp; Cast
+</h2>
+<ul class="character">
+  <li class="man">
+   유럽 최고의 스타 마술사
+   <ul>
+  <li>
+    스탠리 크로포드 
+  </li>
+  <li>
+    콜린 퍼스
+  </li>
+     </ul>
+   </li>
+   <li class="woman">
+     사랑스러운 4차원 심령술사
+  <ul>
+  <li>
+    소피 베이커
+  </li>
+  <li>
+    엠마 스톤
+  </li>
+</ul>
+</li>
+</ul>
+</body>
+</html>

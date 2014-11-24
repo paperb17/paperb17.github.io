@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Inbox - Primary</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        header, section.pane {
+            padding: 1em 1em 0.6em 1em;
+        }
+
+        header {
+            height: 52px;
+            background-color: #DA4336;
+            color: white;
+            vertical-align: top;
+        }
+
+        header .menu {
+            display: inline-block;
+            width: 50px;
+        }
+        header .search{
+            margin: 0 30%;
+        }
+        header .rightmenu{
+            display: inline-block;
+            float: right;
+            vertical-align: top;
+        }
+        header .rightmenu img{
+            margin: 0 0.5em;
+        }
+        header h1 {
+            display: inline;
+            font-size: 1rem;
+            font-weight: normal;
+            vertical-align: top;
+        }
+
+        section.side {
+            position: absolute;
+            top: 52px;
+            left: 0;
+            width: 64px;
+            bottom: 0;
+            background-color: white;
+        }
+        section.side img{
+            margin: 10px auto;
+            display: inline;
+            padding:5px;
+        }
+        section.side .inbox{
+            background-color: #E4E4E4;
+          padding:5px;
+        }
+        section.side .myfrofile, .chatprofile{
+            border-radius: 35px;
+            width: 35px;
+            height: 35px;
+        }
+      section.side .info{
+        padding-bottom:150px;
+      }
+
+
+        section.mainarea {
+            position: absolute;
+            top: 52px;
+            left: 64px;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            box-shadow: -1px 0px 6px #CCC;
+        }
+
+        section.list,
+        section.content {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background-color: white;
+            box-shadow: -1px 0px 6px #CCC;
+            overflow-y: scroll;
+        }
+
+        section.list {
+            width: 40%;
+            left: 0;
+            z-index: 1;
+            padding:0;
+        }
+        section.list ul{
+            list-style-type: none;
+            padding-left: 0;
+            vertical-align: middle;
+        }
+        section.list li{
+            height: 50px;
+            line-height: 15px;
+            vertical-align: middle;
+            padding: 10px 10px;
+          border-bottom:1px solid #ECECEC;
+        }
+        .maleficent{
+          background-color:#E3EDFE;
+          border-left:3px solid #5B94F5;
+        }
+        .state{
+          display:inline;
+          float:right;
+          vertical-align: middle;
+          background-color:#4986E7;
+          color:white;
+          padding:0 7px;
+          font-size:12px;
+          line-height: 15px;
+        }
+        .preview{
+            width:60%;
+            display:inline;
+            float:left;
+            vertical-align: middle;
+            padding-left:0px;
+            }
+        .previewcontent{
+          margin-top:0;
+          font-size: 12px;
+          color: #C6C6C6;
+        }
+        .nick{
+          font-weight: bold;
+        }
+        .profileimg{
+          display: block;
+          float: left;
+          vertical-align: middle;
+          margin-right: 20px;
+          border-radius: 30px;
+          width: 30px;
+          height: 30px;
+        }
+        .time{
+          display:inline;
+          float:right;
+          padding:0;
+          font-size:12px;
+          color:gray;
+          margin:0 5px;
+        }
+        .group{
+            display: inline;
+            float: right;
+            margin: 15px -20px;
+            padding: 0 3px;
+            font-size: 12px;
+            background-color: #99D8E5;
+        }
+        .bookmark{
+            width: 15px;
+            height: 15px;
+            float: right;
+            margin: 15px -50px;
+        }
+      .moviegroup{
+        display:inline;
+        float:right;
+        margin: 15px -20px;
+        padding:0 3px;
+        font-size:12px;
+        background-color:#B5CEF5;
+        color:#617BAE;
+      }
+      .edit{
+        background-color:red;
+        border-radius:35px;
+        width:50px;
+        padding:10px;
+        display:inline;
+        margin:10px;
+        position:fixed;
+        box-sizing: border-box;
+        left:36%;
+        right:0;
+        bottom:0;
+      }
+      
+        section.content {
+        width: 60%;
+        right: 0;
+        }
+      section.content ul{
+        list-style-type:none;
+        padding-left:20px;
+      }
+      section.content .li{
+        height: 50px;
+        line-height: 15px;
+        vertical-align: middle;
+        border-bottom:1px solid #ECECEC;
+      }
+      section.content .chatroom{
+        font-weight:bold;
+        margin-right: 5px;
+      }
+      section.content .movie{
+        background-color: #B5CEF5;
+        color:#617BAE;
+        display:inline;
+        padding:0 5px;
+        font-size:12px;
+      }
+      section.content .inbox{
+        background-color: #DDDDDD;
+        color: #B6B6B6;
+        display:inline;
+        padding:0 5px;
+        font-size:12px;
+      }
+      section.content .bookmark{
+        margin: 0;
+        vertical-align:middle;
+      }
+      .reply, .replyall, .forward{
+        padding:0 50px;
+      }
+      .bottommenu{
+        text-align:center;
+        margin-top:200px;
+      }
+      
+      @media (max-width: 500px){
+        section.content{
+          display:none;
+        }
+        section.list{
+          width:100%;
+        }
+      }
+    </style>
+</head>    
+<body>
+    <header>
+        <div class="menu">
+            <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/ic_menu_24px.svg" alt="menu">
+        </div>
+        <h1>Primary</h1>
+        <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/ic_search_24px.svg" alt="search" class="search">
+        <div class="rightmenu">
+        <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/ic_archive_24px.svg" alt="archive">
+        <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/ic_delete_24px.svg" alt="delete">
+        <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/ic_mail_24px.svg" alt="mail">
+        <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/ic_folder_24px.svg" alt="folder">
+        <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/ic_more_vert_24px.svg" alt="morevert">
+        </div>
+    </header>
+
+    <section class="side pane">
+      <img src="http://media-cache-ak0.pinimg.com/736x/9d/d4/e0/9dd4e00e44c501d2642fdc8fc3892abb.jpg" alt="profile" class="myfrofile">
+      <img src="http://google.github.io/material-design-icons/content/svg/ic_inbox_24px.svg" alt="inbox" class="inbox">
+      <img src="http://google.github.io/material-design-icons/action/svg/ic_account_child_24px.svg" alt="accountchild">
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/ic_mark_24px.svg" alt="mark" class="mark">
+      <img src="http://google.github.io/material-design-icons/action/svg/ic_info_24px.svg" alt="info" class="info">
+      <img src="http://media-cache-ec0.pinimg.com/736x/96/67/43/966743170ec4b12ce3e46f483ef03c4a.jpg" alt="chatprofile" class="chatprofile">
+      <img src="http://media-cache-ec0.pinimg.com/736x/df/b1/da/dfb1daece672198751ac84f976f98dad.jpg" alt="chatprofile" class="chatprofile">
+    </section>
+
+    <section class="mainarea">
+        <section class="list pane">
+            <ul>
+            <li>
+                <div class="preview">
+                <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/blue_account_child_24px.svg" class="profileimg" alt="profileimg" >
+                <span class="nick">Social</span>
+                <p class="previewcontent">Google+</p>
+                </div>
+                <div class="state">1 new</div>
+            </li>
+            <li>
+                <div class="preview">
+                <img src="http://media-cache-ec0.pinimg.com/736x/a2/f8/46/a2f846c1f27edde7e26330196dc92942.jpg" class="profileimg" alt="profileimg">
+                <span class="nick">Amanda Seyfried</span>
+                <p class="previewcontent">How was my movie?</p>
+                </div>
+                <div class="time">1:45 PM</div>
+            </li>
+            <li>
+                <div class="preview">
+                <img src="http://media-cache-ak0.pinimg.com/736x/11/ac/d7/11acd715dae07974989ad0b0ba5748da.jpg" class="profileimg" alt="profileimg">
+                <span class="nick">Sister</span>
+                <p class="previewcontent"> :-0 </p>
+                </div>
+                <div class="time">1:30 PM</div>
+                <div class="group">family</div>
+                <img class="bookmark" src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/ic_star_24px.svg" alt="bookmark">
+                
+            </li>
+            <li>
+                <div class="preview">
+                <img src="http://media-cache-ak0.pinimg.com/736x/ce/b1/24/ceb124703126b5eb4c8519a38f2f83e8.jpg" class="profileimg" alt="profileimg">
+                <span class="nick">Emma Watson</span>
+                <p class="previewcontent">Wow</p>
+                </div>
+                <div class="time">12:10 PM</div>
+            </li>
+            <li>
+                <div class="preview">
+                <img src="http://media-cache-ak0.pinimg.com/736x/79/fc/2d/79fc2d41b891353e289ce256cfefe4d3.jpg" class="profileimg" alt="profileimg">
+                <span class="nick">Dylan OBrien</span>
+                <p class="previewcontent">bb</p>
+                </div>
+                <div class="time">12:00 PM</div>
+            </li>
+            <li>
+                <div class="preview">
+                <img src="http://media-cache-ec0.pinimg.com/736x/28/9d/ec/289dec8911a72dfc1eb8bcc9ec48bca7.jpg" class="profileimg" alt="profileimg">
+                <span class="nick">Tyler Posey</span>
+                <p class="previewcontent">bb</p>
+                </div>
+                <div class="time">12:00 PM</div>
+            </li>
+            <li>
+                <div class="preview">
+                <img src="http://media-cache-ec0.pinimg.com/736x/c5/68/45/c56845aef67b0df17a69733e79956aee.jpg" class="profileimg" alt="profileimg">
+                <span class="nick">Shailene Woodley</span>
+                <p class="previewcontent">bb</p>
+                </div>
+                <div class="time">12:00 PM</div>
+            </li>
+            <li>
+                <div class="preview">
+                <img src="http://media-cache-ak0.pinimg.com/736x/79/fc/2d/79fc2d41b891353e289ce256cfefe4d3.jpg" class="profileimg" alt="profileimg">
+                <span class="nick">Dylan OBrien</span>
+                <p class="previewcontent">bb</p>
+                </div>
+                <div class="time">Sep 22</div>
+            </li>
+            <li>
+                <div class="preview">
+                <img src="http://media-cache-ak0.pinimg.com/736x/79/fc/2d/79fc2d41b891353e289ce256cfefe4d3.jpg" class="profileimg" alt="profileimg">
+                <span class="nick">Dylan OBrien</span>
+                <p class="previewcontent">bb</p>
+                </div>
+                <div class="time">Sep 20</div>
+            </li>
+            <li class="maleficent">
+                <div class="preview">
+                <img src="http://media-cache-ec0.pinimg.com/474x/61/1d/34/611d34f2a6de6aaf138cbf9f1d85ec97.jpg" class="profileimg" alt="profileimg">
+                <span class="nick">Angelina Jolie, Juno Temple 2</span>
+                <p class="previewcontent">Maleficent</p>
+                </div>
+                <div class="time">Sep 19</div>
+              <div class="moviegroup">movie</div>
+              <img class="bookmark" src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/ic_star_24px.svg" alt="bookmark">
+            </li>
+            <li>
+                <div class="preview">
+                <img src="http://media-cache-ak0.pinimg.com/736x/79/fc/2d/79fc2d41b891353e289ce256cfefe4d3.jpg" class="profileimg" alt="profileimg">
+                <span class="nick">Dylan OBrien</span>
+                <p class="previewcontent">hey</p>
+                </div>
+                <div class="time">Sep 19</div>
+            </li>
+            <li>
+                <div class="preview">
+                <img src="http://media-cache-ak0.pinimg.com/736x/79/fc/2d/79fc2d41b891353e289ce256cfefe4d3.jpg" class="profileimg" alt="profileimg">
+                <span class="nick">Dylan OBrien</span>
+                <p class="previewcontent">dinner tonight?</p>
+                </div>
+                <div class="time">Sep 17</div>
+            </li>
+              <li>
+                <div class="preview">
+                <img src="http://media-cache-ak0.pinimg.com/736x/79/fc/2d/79fc2d41b891353e289ce256cfefe4d3.jpg" class="profileimg" alt="profileimg">
+                <span class="nick">Dylan OBrien</span>
+                <p class="previewcontent">hi</p>
+                </div>
+                <div class="time">Sep 14</div>
+            </li>
+              <li>
+                <div class="preview">
+                <img src="http://media-cache-ak0.pinimg.com/736x/79/fc/2d/79fc2d41b891353e289ce256cfefe4d3.jpg" class="profileimg" alt="profileimg">
+                <span class="nick">Dylan OBrien</span>
+                <p class="previewcontent">hey</p>
+                </div>
+                <div class="time">Sep 11</div>
+            </li>
+            </ul>
+          <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/ic_mode_edit_24px.svg" alt="edit" class="edit">
+        </section>
+      
+        <section class="content pane">
+                <span class="chatroom">Maleficent</span>
+                <div class="movie">movie</div>
+                <div class="inbox">inbox</div>
+                <img src="https://googledrive.com/host/0B-CaDIo9AdmtcmhfMlRaWlBxUVE/ic_star_24px.svg" alt="bookmark" class="bookmark">
+          <ul>
+              <li>
+                <img src="http://media-cache-ec0.pinimg.com/736x/1a/be/85/1abe85eab056c23d94a03384cbaa3021.jpg" class="profileimg" alt="profileimg">
+                <span class="nick">Angelina Jolie</span>
+                <p class="previewcontent">ha</p>
+                <div class="time">Sep 19</div>
+          </li>
+      <li>
+                <img src="http://media-cache-ec0.pinimg.com/736x/a7/fe/7e/a7fe7e7ee48a10c4d159f190bdf3a7eb.jpg" class="profileimg" alt="profileimg">
+                <span class="nick">Juno Temple</span>
+                <p class="previewcontent">ha</p>
+                <div class="time">Sep 19</div>
+          </li>
+  <li>
+          </li>
+            </ul>
+<div class="bottommenu">
+  <img src="http://google.github.io/material-design-icons/content/svg/ic_reply_24px.svg" class="reply" alt="reply">
+  <img src="http://google.github.io/material-design-icons/content/svg/ic_reply_all_24px.svg" class="replyall" alt="replyall">
+  <img src="http://google.github.io/material-design-icons/content/svg/ic_forward_24px.svg" class="forward" alt="forward">
+</div>
+        </section>
+    </section>
+</body>
+</html>

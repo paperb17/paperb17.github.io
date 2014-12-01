@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <meta charset="utf-8">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css'>
+  <style>
+    body{
+      font-family:'Nanum Gothic' , sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    
+    header{
+      position: absolute;
+      left:0;
+      right:0;
+      top:0;
+      box-sizing: border-box;
+      z-index: 1;
+      height:150px;
+    }
+    
+    div.search{      
+      padding-top:20px;
+      padding-bottom: 20px;
+      padding-left: 22%;
+      background-color: #4688F1;
+      color: white;
+    }
+    .fa-arrow-left{
+      padding-right: 15px;
+    }
+    .fa-car{
+      color:#A9C8F8;
+    }
+    img.walking, img.subway{
+      width: 30px;
+      height: 30px;
+      vertical-align:middle;
+    }
+    .fa-car, .walking, .subway{
+      margin: 0 1em;
+    }
+    .fa-ellipsis-v{
+      padding-left: 2px;
+    }
+    span.departure{
+      margin-left: 30px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #A9C8F8;
+      padding-right: 50%;
+    }
+    span.destination{
+      margin-left: 30px;
+    }
+    div.mark{
+      margin-top:20px;
+    }
+    img.change{
+      width: 20px;
+      height: 20px;
+      vertical-align: top;
+      margin-top: 20px;
+      margin-left: 30px;
+      position: absolute;
+    }   
+    
+    div.depart{
+      background-color: #366AD3;
+      color: white;
+      padding-top:5px;
+      padding-bottom: 5px;
+      padding-left: 22%;
+    }
+    span.sliders{
+      color:#A9C8F8;
+      margin-right: 26px;
+    }
+    .options{
+      float: right;
+      padding-right: 30%;
+      text-transform: uppercase;
+    }
+    
+    section.main{
+      position: absolute;
+      left: 20%;
+      top: 170px;
+      right: 20%;
+      bottom: 0;
+      padding: 20px;
+      overflow-y: scroll;
+    }
+    .time{
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .time li{
+      padding-bottom: 10px;
+      padding-top: 10px;
+      border-bottom: 1px solid #E2E2E2;
+      line-height: 22px;
+      color: #747474;
+    }
+    img.graysub{
+      display:inline-block;
+      float: left;
+      width:25px;
+      height:25px;
+      margin-bottom:50px;
+      margin-right: 20px;
+    }
+    img.forwalk{
+      width:20px;
+      height:20px;
+      vertical-align:top;
+    }
+    img.first, img.second, img.third, img.fourth{
+      width:25px;
+      height:25px;
+      vertical-align: top;
+    }
+    
+    div.time{
+      font-weight: bold;
+      color:black;
+    }
+    .fa-angle-right{
+      color: #CECECE;
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+    mark.blue{
+      padding: 0 3px;
+      color:white;
+      background-color: #3A56EE;
+      vertical-align: bottom;
+    }
+    mark.blue2{
+      padding: 0 3px;
+      color:white;
+      background-color: #3A56EE;
+      vertical-align: bottom;
+    }
+    mark.green{
+      padding: 0 3px;
+      color: white;
+      background-color: #22BB26;
+      vertical-align: bottom;
+    }
+    mark.red{
+      padding: 0 3px;
+      color: white;
+      background-color: #CC3C13;
+      vertical-align: bottom;
+    }
+    span.total{
+      float:right;
+      font-weight:bold;
+      color:black;
+      padding-right: 10px;
+    }
+    @media (max-width: 400px){
+      
+       div.search{
+         padding: 20px;
+       }
+       span.departure{
+        padding-right: 30%;
+      }
+      div.depart{
+        padding-left:20px;
+      }
+      .options{
+        padding-right:10px;
+      }
+        section.main{
+          left: 0;
+          right: 0;
+        }
+      .green, .blue2, .red, .total{
+        display:none;
+      }
+      }
+    
+  </style>
+</head>
+ 
+<body>
+  <header>
+  <div class="search">
+    <i class="fa fa-arrow-left"></i>
+      <span class="car">
+    <i class="fa fa-car"></i>
+      </span>
+      <span class="subway">
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/subway_white.svg" alt="subway" class="subway">
+      </span>
+      <span class="walking">
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/walking_blue.svg" alt="walking" class="walking">
+      </span>
+    <div class="mark">
+  <div>
+  <i class="fa fa-map-marker"></i>
+    <span class="departure">계원예술대학교</span>
+    <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/oppositie_blue.svg" alt="change" class="change">
+  </div>
+    <i class="fa fa-ellipsis-v"></i>
+      
+  <div>
+    <i class="fa fa-map-marker"></i>
+    <span class="destination">신사동가로수길</span>
+  </div>
+    </div>
+  </div>
+  <div class="depart">
+    <span class="sliders">
+      <i class="fa fa-sliders"></i> 
+    </span>
+  <span>Depart at 4:09 PM</span>
+  <span class="options">Options</span>
+  </div>
+  </header>
+
+  <section class="main">
+  <ul class="time">
+    <li>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/subway_gray.svg" alt="subway" class="graysub">
+      <div class="time">
+        4:09 - 5:35 PM 1 hr 25 min 
+        <span class="total">1 hr 25 min</span>
+      </div>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/walking_gray.svg" alt="first" class="first">   <i class="fa fa-angle-right"></i>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/bus_gray.svg" alt="second" class="second">      <mark class="blue">1-1</mark>
+      <i class="fa fa-angle-right"></i>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/bus_gray.svg" alt="third" class="third">
+      <mark class="blue">441</mark>     
+      <div>4:25 PM from 계원예술대학교</div>
+      <div><img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/walking_gray2.svg" alt="forwalk" class="forwalk">10 min Every 10 min</div>
+    </li>
+    <li>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/subway_gray.svg" alt="subway" class="graysub">
+      <div class="time">
+        4:09 - 5:41 PM 1 hr 31 min
+      <span class="total">1 hr 31 min</span>
+      </div>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/walking_gray.svg" alt="first" class="first">   <i class="fa fa-angle-right"></i>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/bus_gray.svg" alt="second" class="second">      <mark class="blue">1-1</mark>
+      <i class="fa fa-angle-right"></i>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/bus_gray.svg" alt="third" class="third">
+      <mark class="green">4318</mark>
+      <i class="fa fa-angle-right"></i>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/bus_gray.svg" alt="fourth" class="fourth">
+      <mark class="red">9404</mark>      
+      <div>4:25 PM from 계원예술대학교</div>
+      <div><img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/walking_gray2.svg" alt="forwalk" class="forwalk">10 min Every 12 min</div>
+    </li>
+    <li>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/subway_gray.svg" alt="subway" class="graysub">
+      <div class="time">
+        4:09 - 5:49 PM 1 hr 39 min
+      <span class="total">1 hr 39 min</span>
+      </div>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/walking_gray.svg" alt="first" class="first">   <i class="fa fa-angle-right"></i>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/bus_gray.svg" alt="second" class="second">      <mark class="blue">51</mark>
+      <i class="fa fa-angle-right"></i>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/bus_gray.svg" alt="third" class="third">
+      <mark class="blue2">540</mark>
+      <i class="fa fa-angle-right"></i>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/bus_gray.svg" alt="fourth" class="fourth">
+      <mark class="blue2">148</mark>      
+      <div>4:22 PM from 계원예술대학교</div>
+      <div><img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/walking_gray2.svg" alt="forwalk" class="forwalk">10 min Every 12 min</div>
+    </li>
+    <li>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/subway_gray.svg" alt="subway" class="graysub">
+      <div class="time">
+        4:09 - 5:47 PM 1 hr 38 min
+      <span class="total">1 hr 38 min</span>
+      </div>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/walking_gray.svg" alt="first" class="first">   <i class="fa fa-angle-right"></i>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/bus_gray.svg" alt="second" class="second">      <mark class="blue">51</mark>
+      <i class="fa fa-angle-right"></i>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/bus_gray.svg" alt="third" class="third">
+      <mark class="red">3030</mark>
+      <i class="fa fa-angle-right"></i>
+      <img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/bus_gray.svg" alt="fourth" class="fourth">
+      <mark class="blue2">145</mark>
+      <div>4:22 PM from 계원예술대학교</div>
+      <div><img src="https://googledrive.com/host/0B-CaDIo9AdmtY1k1UUNQX0VkWjA/walking_gray2.svg" alt="forwalk" class="forwalk">11 min Every 20 min</div>
+    </li>
+    </ul>
+    </section>
+</body>
+</html>

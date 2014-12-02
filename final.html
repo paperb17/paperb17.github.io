@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Alarm</title>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <style>
+    body{
+      max-width: 500px;
+      margin:0 auto;
+      font-family: 'Open Sans Condensed', sans-serif;
+      background-color: #5CFFBD;
+    }
+    .알람전체{
+      width: 90%;
+      margin: 0 auto;
+      box-shadow: 3px 3px 3px #2DC986;
+    }
+    
+    .창{
+      background-color: #0096A6;
+      text-align: right;
+      color: #45B4C0;
+      padding: 7px;
+    }
+    .창 i{
+      padding: 0 0.3em;
+    }
+    .fa-square-o{
+      font-weight: bold;
+    }
+    
+    .날짜{
+      background-color: #00BCD4;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      
+    }
+    .일{
+      font-size: 60px;
+      padding: 40px;
+      margin-right: 1em;
+      margin-left: 1em;
+    }
+    .왼쪽, .오른쪽{
+      color: #AAEBF2;
+    }
+    .년월{
+      color: #007C8D;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    
+    .요일{
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: #5E5F5F;
+      color:white;
+      padding-left: 20px;
+      padding-bottom: 6px;
+      padding-top: 6px;
+    }
+    .추가{
+      color: #464214;
+      background-color: #FFEE4D;
+      border-radius: 50px;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      box-shadow: 3px 3px 3px #3E3E40;
+      float: right;
+      margin-top: -30px;
+      margin-right: 20px;
+    }
+    
+    section.메인{
+      background-color: #F5FEFF;
+      padding: 20px;
+      overflow-y: scroll;
+    }
+    .알람{
+      list-style-type: none;
+      padding-left: 0;
+      font-weight: bold;
+    }
+    .알람 li{
+      height: 100px; 
+    }
+    .알람시간1{
+      font-size: 30px;
+      color: #6C6E6E;
+      
+    }
+    .반복, .벨울림, .켜짐{
+      color: #57A2D3;
+    }
+    .벨안울림, .반복안함{
+      color: #CFCFCF;
+    }
+    .안켜짐{
+      color: #797B7C;
+      float: right;
+    }
+    .켜짐{
+      float: right;
+    }
+    .반복, .반복안함{
+      padding: 0 3px;
+    }  
+    .알람1, .알람2, .알람3{
+      border-bottom: 1px solid #E4EAEA;
+      padding-bottom: 10px;
+    }
+    .켜진시간{
+      font-size: 30px;
+      color: #545353;
+    }
+    .꺼진시간{
+      font-size: 30px;
+      color: #A6AAAA;
+    }
+    .벨울림, .벨안울림{
+      float:left;
+      font-size: 14px;
+      padding-right: 10px;
+      height:70px;
+    }
+    
+    .
+    
+  </style>
+</head>
+<body>
+  <div class="알람전체">
+  <header>
+    <div class="창">
+  <i class="fa fa-minus"></i>
+  <i class="fa fa-square-o"></i>
+  <i class="fa fa-remove"></i>
+    </div>
+    <div class="날짜">
+      <span class="왼쪽">
+  <i class="fa fa-arrow-left"></i>
+      </span>
+  <span class="일">18</span>
+      <span class="오른쪽">
+  <i class="fa fa-arrow-right"></i>
+      </span>
+    <div class="년월">
+  July 2014
+    </div>
+    </div>
+    <div class="요일">
+  Monday
+      <div class="추가">
+    <i class="fa fa-plus"></i>
+      </div>
+    </div>
+  </header>
+  
+  <section class="메인">
+    <ul class="알람">
+      <li>
+        <span class="벨울림">
+  <i class="fa fa-bell"></i>
+        </span>
+        <div class="알람1">
+        <div class="켜진시간">
+          06:30
+        </div>
+        <span class="반복">SU</span> <span class="반복안함">MO</span> <span class="반복">TU</span> <span class="반복">WE</span> <span class="반복안함">TH</span> <span class="반복">FR</span> <span class="반복">SA</span>
+        <span class="켜짐">
+  <i class="fa fa-circle"></i>
+        </span>
+        </div>
+      </li>
+      <li>
+        <span class="벨안울림">
+  <i class="fa fa-bell"></i>
+        </span>
+        <div class="알람2">
+        <div class="꺼진시간">
+          09:30
+        </div>
+        <span class="반복안함">SU</span> <span class="반복안함">MO</span> <span class="반복안함">TU</span> <span class="반복">WE</span> <span class="반복안함">TH</span> <span class="반복안함">FR</span> <span class="반복안함">SA</span>
+        <span class="안켜짐">
+  <i class="fa fa-circle-o"></i>
+        </span>
+        </div>
+      </li>
+      <li>
+        <span class="벨울림">
+  <i class="fa fa-bell"></i>
+        </span>
+        <div class="알람3">
+        <div class="꺼진시간">
+          15:30
+        </div>
+        <span class="반복">SU</span> <span class="반복안함">MO</span> <span class="반복안함">TU</span> <span class="반복안함">WE</span> <span class="반복안함">TH</span> <span class="반복안함">FR</span> <span class="반복안함">SA</span>
+        <span class="켜짐">
+  <i class="fa fa-circle"></i>
+        </span>
+        </div>
+      </li>
+      <li>
+        <span class="벨울림">
+        <i class="fa fa-bell"></i>
+        </span>
+        <div class="알람4">
+        <div class="켜진시간">
+          19:40
+        </div>
+        <span class="반복안함">SU</span> <span class="반복안함">MO</span> <span class="반복안함">TU</span> <span class="반복안함">WE</span> <span class="반복안함">TH</span> <span class="반복안함">FR</span> <span class="반복">SA</span>
+        <span class="켜짐">
+        <i class="fa fa-circle"></i>
+        </span>
+        </div>
+      </li>
+    </ul>
+    </div>
+  </section>
+</body>
+</html>
